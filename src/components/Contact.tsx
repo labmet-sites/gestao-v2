@@ -35,7 +35,7 @@ export default function ContatoSection() {
           </InfoItem>
           <InfoItem>
             <Label>Telefone:</Label>
-            <Value>(83) 99873-5103</Value>
+            <Value>(83) 98874-4407</Value>
           </InfoItem>
         </InfoBlock>
         <Logo

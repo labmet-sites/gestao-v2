@@ -104,6 +104,36 @@ export const HomeStyles = styled.section`
     background-size: cover;
     background-position: center center;
     box-sizing: border-box;
+    position: relative;
+
+    .inicio-aulas {
+      width: 100%;
+      position: absolute;
+      color: #ffffff;
+      left: 0px;
+      top: 78px;
+      margin-left: 20px;
+      font-size: 17px;
+      font-weight: 400;
+      display: flex;
+      strong {
+        font-weight: 800;
+        margin-right: 6px;
+      }
+
+      @media (max-width: 700px) {
+        margin: 0px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @media (max-width: 540px) {
+        margin: 0px;
+        align-items: center;
+        justify-content: center;
+        top: 110px;
+      }
+    }
 
     .home-content {
       text-align: center;

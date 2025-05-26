@@ -43,6 +43,9 @@ export default function Home() {
         </ul>
       </header>
       <section id="home" className="home-container">
+        <p className="inicio-aulas">
+          <strong>Início das Aulas:</strong> 2º Semestre de 2025
+        </p>
         <div className="home-content">
           <img src={ufcgName} className="ufcg-img" alt="UFCG" />
           <h1 className="main-title">
