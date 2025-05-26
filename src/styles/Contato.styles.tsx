@@ -106,12 +106,4 @@ export const Logo = styled.img`
   position: absolute;
   bottom: 20px;
   right: 20px;
-
-  @media (max-width: 768px) {
-    width: 60px;
-  }
-
-  @media (max-width: 480px) {
-    width: 32px;
-  }
 `;
