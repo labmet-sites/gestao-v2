@@ -1,6 +1,6 @@
 export const disciplinas = [
   {
-    nivel: "1. Núcleo Básico",
+    nivel: "1. Núcleo Básico ",
     conteudos: [
       {
         titulo: "1.1 Metodologia da Pesquisa Científica (15h)",
