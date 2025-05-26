@@ -120,6 +120,10 @@ outras medidas de lucratividade e rentabilidade.`,
         ementa: ` Introdução à aprendizagem de máquina; interpretação de resultados de modelos 
 de IA; Utilização de Softwares de Planejamento e Gestão de Ativos.`,
       },
+      {
+        titulo: "3.2 Trabalho de Conclusão de Curso (TCC)",
+        ementa: ` Constará de uma pesquisa sobre temática abordada durante o curso, com orientação de um professor do corpo docente, resultando na apresentação em forma de artigo científico.`,
+      },
     ],
   },
 ];
