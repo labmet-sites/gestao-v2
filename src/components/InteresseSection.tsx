@@ -38,7 +38,7 @@ export default function InteresseSection() {
     e.preventDefault();
 
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbwrXQboctWIre72jbZCJDwumQ-2kG6Og9eOkelwPqJMMnoLT_ofvEBeIJq23wR84uy6AA/exec",
+      "https://script.google.com/macros/s/AKfycbwFWv3OgwED9FsVJEirZyoTbkkQ69Mc6eCDYbOkOlq8DbHNp7FQZFaQldfdqjhtq17RPA/exec",
       {
         method: "POST",
         mode: "no-cors",
