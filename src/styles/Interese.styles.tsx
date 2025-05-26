@@ -8,6 +8,30 @@ export const Section = styled.section`
   align-items: center;
   box-sizing: border-box;
 
+  .wpp-text {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .wpp-p {
+      font-size: 19px;
+      font-weight: 400;
+    }
+
+    .wpp-icon {
+      margin-top: 8px;
+      transition: 300ms;
+
+      &:hover {
+        cursor: pointer;
+        scale: 1.1;
+      }
+    }
+  }
+
   @media (max-width: 768px) {
     padding: 3rem 1rem;
   }

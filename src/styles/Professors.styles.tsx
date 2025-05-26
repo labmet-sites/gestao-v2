@@ -89,6 +89,8 @@ export const ProfessorsSection = styled.section`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    overflow-y: auto;
+    overflow: auto;
 
     p {
       font-size: 0.98rem;

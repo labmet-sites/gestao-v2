@@ -11,6 +11,7 @@ import {
   TextArea,
   Button,
 } from "../styles/Interese.styles";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function InteresseSection() {
   const [form, setForm] = useState({
@@ -35,6 +36,7 @@ export default function InteresseSection() {
   return (
     <Section id="interesse">
       <Title>Tem interesse ou alguma dúvida?</Title>
+      <Title>Escreva para a gente!</Title>
       <Form onSubmit={handleSubmit}>
         <InputGroup>
           <Label htmlFor="nome">Nome completo</Label>
@@ -69,6 +71,18 @@ export default function InteresseSection() {
         </InputGroup>
         <Button type="submit">Enviar</Button>
       </Form>
+      <div className="wpp-text">
+        <p className="wpp-p">Entre no nosso grupo do Whatsapp para mais informações</p>
+        <a
+          href="https://chat.whatsapp.com/Is4pCvxzWhY223Q0iPpntS"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Entrar no grupo do WhatsApp"
+          className="wpp-icon"
+        >
+          <FaWhatsapp size={48} color="#1fb627" />
+        </a>
+      </div>
     </Section>
   );
 }

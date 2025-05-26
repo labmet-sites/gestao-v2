@@ -93,6 +93,7 @@ export const EstruturaSection = styled.section`
   .card.open .card-body {
     max-height: 300px;
     opacity: 1;
+    overflow: auto;
   }
 
   .card-body p {

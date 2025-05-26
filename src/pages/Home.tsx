@@ -6,6 +6,7 @@ import Professors from "../components/Professors";
 import { FaWhatsapp } from "react-icons/fa";
 import InteresseSection from "../components/InteresseSection";
 import Estrutura from "../components/Estrutura";
+import ContatoSection from "../components/Contact";
 
 export default function Home() {
   const scrollToSection = (sectionId: string) => {
@@ -99,13 +100,14 @@ export default function Home() {
       <Professors />
       <InteresseSection />
 
-      <section id="contato" className="sec-contato">
-        Contato
-      </section>
+      <ContatoSection />
       <footer>
-        <img src={ufcgLogo} />
-        <p>Universidade Federal de Campina grande</p>
+        <div className="footer-content">
+          <img src={ufcgLogo} alt="Logo da UFCG" />
+          <p>Universidade Federal de Campina Grande</p>
+        </div>
       </footer>
+
       <a
         href="https://chat.whatsapp.com/Is4pCvxzWhY223Q0iPpntS"
         target="_blank"
