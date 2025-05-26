@@ -11,7 +11,7 @@ export default function Professors() {
   };
 
   return (
-    <ProfessorsSection>
+    <ProfessorsSection id="professores">
       <h2 className="section-title">Nosso Corpo Docente</h2>
       <div className="cards">
         {professores.map((prof) => (

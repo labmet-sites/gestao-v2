@@ -384,4 +384,49 @@ export const HomeStyles = styled.section`
   .whatsapp-float:hover {
     transform: scale(1.1);
   }
+
+  .sec-estrutura {
+    padding: 4rem 2rem;
+    background: linear-gradient(to bottom, #00388d, #000730);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .disciplines {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+    flex: 1 1 300px;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .disciplines:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .level-title {
+    font-size: 1.5rem;
+    color: #2a2a2a;
+    margin-bottom: 1.2rem;
+    border-left: 6px solid #25d366;
+    padding-left: 0.75rem;
+  }
+
+  .discipline {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+    border-left: 3px solid #e0e0e0;
+    transition: color 0.3s ease;
+  }
+
+  .discipline:hover {
+    color: #25d366;
+  }
 `;

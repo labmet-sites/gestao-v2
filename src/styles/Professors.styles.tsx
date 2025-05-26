@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProfessorsSection = styled.section`
-  background: #0077ff;
+  background: #010b27;
   padding: 5rem 1.5rem;
   font-family: "Inter", sans-serif;
   color: #1e293b;
@@ -26,7 +26,7 @@ export const ProfessorsSection = styled.section`
   }
 
   .card {
-    border-left: 6px solid #03185a;
+    border-left: 6px solid #57d8ff;
     background: white;
     border-radius: 12px;
     padding: 1.5rem 1.75rem;
@@ -54,14 +54,14 @@ export const ProfessorsSection = styled.section`
   }
 
   .toggle-icon {
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 800;
     transition: transform 0.3s ease;
-    color: #0284c7;
+    color: #010b27;
   }
 
   .toggle-icon.rotated {
-    transform: rotate(180deg);
+    transform: rotate(45deg);
   }
 
   .card-body {

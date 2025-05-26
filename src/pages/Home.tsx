@@ -4,6 +4,8 @@ import ufcgName from "../assets/ufcg_png.png";
 import vector from "../assets/vector_about.jpg";
 import Professors from "../components/Professors";
 import { FaWhatsapp } from "react-icons/fa";
+import InteresseSection from "../components/InteresseSection";
+import Estrutura from "../components/Estrutura";
 
 export default function Home() {
   const scrollToSection = (sectionId: string) => {
@@ -24,12 +26,16 @@ export default function Home() {
           <li className="option" onClick={() => scrollToSection("sobre")}>
             Sobre
           </li>
+          <li className="option" onClick={() => scrollToSection("estrutura")}>
+            Estrutura Curricular
+          </li>
           <li className="option" onClick={() => scrollToSection("professores")}>
             Professores
           </li>
           <li className="option" onClick={() => scrollToSection("interesse")}>
             Tenho Iteresse
           </li>
+
           <li className="option" onClick={() => scrollToSection("contato")}>
             Contato
           </li>
@@ -44,8 +50,7 @@ export default function Home() {
             Gestão de Ativos
           </h1>
           <p className="sub-title">
-            Curso <strong>Lato Sensu</strong> reconhecido pelo{" "}
-            <strong>MEC</strong>, com emissão de certificado pela{" "}
+            Curso <strong>Lato Sensu</strong> com emissão de certificado pela{" "}
             <strong>UFCG</strong>.
           </p>
           <p className="badge">100% Online</p>
@@ -90,11 +95,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      <Estrutura />
       <Professors />
-      <section id="interesse" className="sec-interesse">
-        Interesse
-      </section>
+      <InteresseSection />
+
       <section id="contato" className="sec-contato">
         Contato
       </section>
