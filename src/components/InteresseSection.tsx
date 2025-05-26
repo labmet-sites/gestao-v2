@@ -11,6 +11,7 @@ import {
   TextArea,
   Button,
 } from "../styles/Interese.styles";
+import Modal from "./Modal";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function InteresseSection() {
@@ -18,6 +19,11 @@ export default function InteresseSection() {
     nome: "",
     telefone: "",
     duvida: "",
+  });
+  const [modal, setModal] = useState({
+    show: false,
+    message: "",
+    success: true,
   });
 
   const handleChange = (
@@ -27,10 +33,36 @@ export default function InteresseSection() {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Dados enviados:", form);
-    alert("Formulário enviado com sucesso!");
+
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbyTUUGXOM3Jl8XKcB7hrHLSdm8hpyxEpw1tfQYZKkSmPUKOrbLORPr8vQXnB5dbyc4X/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      }
+    );
+
+    if (response.ok) {
+      setModal({
+        show: true,
+        message: "Mensagem enviada com sucesso!",
+        success: true,
+      });
+
+      setForm({ nome: "", telefone: "", duvida: "" });
+    } else {
+      setModal({
+        show: true,
+        message: "Mensagem enviada com sucesso!",
+        success: true,
+      });
+    }
   };
 
   return (
@@ -72,7 +104,9 @@ export default function InteresseSection() {
         <Button type="submit">Enviar</Button>
       </Form>
       <div className="wpp-text">
-        <p className="wpp-p">Entre no nosso grupo do Whatsapp para mais informações</p>
+        <p className="wpp-p">
+          Entre no nosso grupo do Whatsapp para mais informações
+        </p>
         <a
           href="https://chat.whatsapp.com/Is4pCvxzWhY223Q0iPpntS"
           target="_blank"
@@ -83,6 +117,12 @@ export default function InteresseSection() {
           <FaWhatsapp size={48} color="#1fb627" />
         </a>
       </div>
+      <Modal
+        show={modal.show}
+        message={modal.message}
+        success={modal.success}
+        onClose={() => setModal({ ...modal, show: false })}
+      />
     </Section>
   );
 }
