@@ -6,8 +6,6 @@ export const ProfessorsSection = styled.section`
   font-family: "Inter", sans-serif;
   color: #1e293b;
   box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
 
   .section-title {
     text-align: center;
@@ -15,14 +13,23 @@ export const ProfessorsSection = styled.section`
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 3rem;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.75rem;
+    }
   }
 
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
-    max-width: 90%;
+    max-width: 1100px;
     margin: 0 auto;
+    width: 100%;
   }
 
   .card {
@@ -45,23 +52,32 @@ export const ProfessorsSection = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
 
-  .card-header h3 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin: 0;
-  }
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 0;
+      color: #1e293b;
 
-  .toggle-icon {
-    font-size: 40px;
-    font-weight: 800;
-    transition: transform 0.3s ease;
-    color: #010b27;
-  }
+      @media (max-width: 480px) {
+        font-size: 1.1rem;
+      }
+    }
 
-  .toggle-icon.rotated {
-    transform: rotate(45deg);
+    .toggle-icon {
+      font-size: 2.5rem;
+      font-weight: 800;
+      transition: transform 0.3s ease;
+      color: #010b27;
+
+      &.rotated {
+        transform: rotate(45deg);
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1.8rem;
+      }
+    }
   }
 
   .card-body {
@@ -73,42 +89,38 @@ export const ProfessorsSection = styled.section`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    p {
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: #334155;
+
+      @media (max-width: 480px) {
+        font-size: 0.95rem;
+      }
+    }
+
+    img {
+      width: 28px;
+      align-self: flex-end;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 
   .card.open .card-body {
-    max-height:500px;
+    max-height: 500px;
     opacity: 1;
   }
 
-  .card-body p {
-    font-size: 0.98rem;
-    line-height: 1.6;
-    color: #334155;
-  }
-
-  .card-body img {
-    width: 28px;
-    align-self: flex-end;
-    transition: transform 0.2s;
-  }
-
-  .card-body img:hover {
-    transform: scale(1.1);
+  @media (max-width: 768px) {
+    padding: 3rem 1rem;
   }
 
   @media (max-width: 480px) {
-    .section-title {
-      font-size: 2rem;
-    }
-
-    .card-header h3 {
-      font-size: 1.1rem;
-    }
-
-    .toggle-icon {
-      font-size: 1.3rem;
-    }
+    padding: 2rem 0.5rem;
   }
-
-  
 `;
