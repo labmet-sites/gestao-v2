@@ -23,7 +23,7 @@ export default function ContatoSection() {
           </Unidade>
           <InfoItem>
             <Label>Coordenador:</Label>
-            <Value>Dr. Jader Morais Borges</Value>
+            <Value>Prof. Dr. Jader Morais Borges</Value>
           </InfoItem>
           <InfoItem>
             <Label>Email:</Label>

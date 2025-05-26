@@ -18,6 +18,7 @@ export default function InteresseSection() {
   const [form, setForm] = useState({
     nome: "",
     telefone: "",
+    email: "",
     duvida: "",
   });
   const [modal, setModal] = useState({
@@ -37,7 +38,7 @@ export default function InteresseSection() {
     e.preventDefault();
 
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbyTUUGXOM3Jl8XKcB7hrHLSdm8hpyxEpw1tfQYZKkSmPUKOrbLORPr8vQXnB5dbyc4X/exec",
+      "https://script.google.com/macros/s/AKfycbwrXQboctWIre72jbZCJDwumQ-2kG6Og9eOkelwPqJMMnoLT_ofvEBeIJq23wR84uy6AA/exec",
       {
         method: "POST",
         mode: "no-cors",
@@ -55,7 +56,7 @@ export default function InteresseSection() {
         success: true,
       });
 
-      setForm({ nome: "", telefone: "", duvida: "" });
+      setForm({ nome: "", telefone: "", email: "", duvida: "" });
     } else {
       setModal({
         show: true,
@@ -88,6 +89,17 @@ export default function InteresseSection() {
             id="telefone"
             name="telefone"
             value={form.telefone}
+            onChange={handleChange}
+            required
+          />
+        </InputGroup>
+        <InputGroup>
+          <Label htmlFor="email">Email</Label>
+          <Input
+            type="email"
+            id="email"
+            name="email"
+            value={form.email}
             onChange={handleChange}
             required
           />
