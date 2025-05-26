@@ -108,10 +108,10 @@ export const Logo = styled.img`
   right: 20px;
 
   @media (max-width: 768px) {
-    width: 140px;
+    width: 60px;
   }
 
   @media (max-width: 480px) {
-    width: 120px;
+    width: 32px;
   }
 `;
