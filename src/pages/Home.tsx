@@ -7,6 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import InteresseSection from "../components/InteresseSection";
 import Estrutura from "../components/Estrutura";
 import ContatoSection from "../components/Contact";
+import InformacoesSection from "../components/InformacoesSection";
 
 export default function Home() {
   const scrollToSection = (sectionId: string) => {
@@ -36,7 +37,9 @@ export default function Home() {
           <li className="option" onClick={() => scrollToSection("interesse")}>
             Tenho Iteresse
           </li>
-
+          <li className="option" onClick={() => scrollToSection("informacoes")}>
+            Mais Informações
+          </li>
           <li className="option" onClick={() => scrollToSection("contato")}>
             Contato
           </li>
@@ -102,7 +105,7 @@ export default function Home() {
       <Estrutura />
       <Professors />
       <InteresseSection />
-
+      <InformacoesSection />
       <ContatoSection />
       <footer>
         <div className="footer-content">

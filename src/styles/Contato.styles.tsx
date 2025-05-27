@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  background: linear-gradient(to bottom, #00388d, #000730);
+  background-color: #010b27;
   padding: 4rem 1rem;
   display: flex;
   flex-direction: column;
