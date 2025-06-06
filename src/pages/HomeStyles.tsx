@@ -11,6 +11,115 @@ export const HomeStyles = styled.section`
   width: 100%;
   height: max-content;
 
+  .inscricao-section {
+    width: 100%;
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #e6f0ff, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .inscricao-wrapper {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    padding: 3rem 2.5rem;
+    max-width: 640px;
+    width: 100%;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .inscricao-wrapper .title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 1rem;
+  }
+
+  .inscricao-wrapper .description {
+    font-size: 1.125rem;
+    color: #333333;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .inscricao-button {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 0.85rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: max-content;
+  }
+
+  .inscricao-button:hover:enabled {
+    background-color: #003f8a;
+  }
+
+  .inscricao-button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+  }
+
+  .periodo-text {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: #666666;
+  }
+
+  @media (max-width: 768px) {
+    .inscricao-wrapper {
+      padding: 2rem 1.5rem;
+    }
+
+    .inscricao-wrapper .title {
+      font-size: 1.7rem;
+    }
+
+    .inscricao-wrapper .description {
+      font-size: 1rem;
+    }
+
+    .inscricao-button {
+      width: 100%;
+      padding: 0.85rem;
+      font-size: 1rem;
+    }
+
+    .periodo-text {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .inscricao-section {
+      padding: 3rem 1rem;
+    }
+
+    .inscricao-wrapper {
+      padding: 1.5rem 1rem;
+    }
+
+    .inscricao-wrapper .title {
+      font-size: 1.5rem;
+    }
+
+    .inscricao-wrapper .description {
+      font-size: 0.95rem;
+    }
+
+    .periodo-text {
+      font-size: 0.85rem;
+    }
+  }
+
   header {
     position: fixed;
     top: 0;
@@ -22,14 +131,22 @@ export const HomeStyles = styled.section`
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     box-sizing: border-box;
     padding: 0 40px;
 
     .header-logo {
       width: 48px;
-      margin-right: 60px;
       height: auto;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      z-index: 1100;
     }
 
     .header-options {
@@ -71,22 +188,37 @@ export const HomeStyles = styled.section`
     }
 
     @media (max-width: 768px) {
-      flex-direction: column;
-      height: auto;
+      flex-wrap: wrap;
+      justify-content: space-between;
       padding: 10px 20px;
-
-      .header-options {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-
-        .option {
-          font-size: 12px;
-        }
-      }
 
       .header-logo {
         display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .header-options {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        display: none;
+        background-color: rgba(255, 255, 255, 0.97);
+        padding: 10px 0;
+        margin-top: 10px;
+
+        &.open {
+          display: flex;
+        }
+
+        .option {
+          font-size: 14px;
+          padding: 10px 20px;
+          width: 100%;
+          box-sizing: border-box;
+        }
       }
     }
   }
@@ -94,6 +226,7 @@ export const HomeStyles = styled.section`
   .home-container {
     width: 100%;
     height: 100vh;
+    box-sizing: border-box;
     padding-top: ${headerHeight};
     display: flex;
     align-items: center;
@@ -103,16 +236,13 @@ export const HomeStyles = styled.section`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    box-sizing: border-box;
     position: relative;
 
     .inicio-aulas {
-      width: 100%;
       position: absolute;
       color: #ffffff;
-      left: 0px;
+      left: 30px;
       top: 78px;
-      margin-left: 20px;
       font-size: 17px;
       font-weight: 400;
       display: flex;
@@ -122,13 +252,11 @@ export const HomeStyles = styled.section`
       }
 
       @media (max-width: 700px) {
-        margin: 0px;
         align-items: center;
         justify-content: center;
       }
 
       @media (max-width: 540px) {
-        margin: 0px;
         align-items: center;
         justify-content: center;
         top: 110px;

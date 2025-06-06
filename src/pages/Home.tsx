@@ -8,6 +8,7 @@ import InteresseSection from "../components/InteresseSection";
 import Estrutura from "../components/Estrutura";
 import ContatoSection from "../components/Contact";
 import InformacoesSection from "../components/InformacoesSection";
+import { useState } from "react";
 
 export default function Home() {
   const scrollToSection = (sectionId: string) => {
@@ -17,11 +18,22 @@ export default function Home() {
     }
   };
 
+  const hoje = new Date();
+  const inicioInscricao = new Date("2025-06-16T00:00:00");
+  const fimInscricao = new Date("2025-07-07T23:59:59");
+  const isPeriodoInscricao = hoje >= inicioInscricao && hoje <= fimInscricao;
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
   return (
     <HomeStyles>
       <header>
         <img className="header-logo" src={ufcgLogo} />
-        <ul className="header-options">
+        <button className="menu-toggle" onClick={toggleMenu}>
+          ☰
+        </button>
+
+        <ul className={`header-options ${menuOpen ? "open" : ""}`}>
           <li className="option" onClick={() => scrollToSection("home")}>
             Home
           </li>
@@ -42,6 +54,17 @@ export default function Home() {
           </li>
           <li className="option" onClick={() => scrollToSection("contato")}>
             Contato
+          </li>
+          <a
+            href="https://prpg.ufcg.edu.br/arquivos/editais/2025/edital-34-2025.pdf"
+            target="_blank"
+            className="option"
+            style={{ textDecoration: "none" }}
+          >
+            Edital
+          </a>
+          <li className="option" onClick={() => scrollToSection("inscrição")}>
+            Inscrição
           </li>
         </ul>
       </header>
@@ -107,6 +130,29 @@ export default function Home() {
       <InteresseSection />
       <InformacoesSection />
       <ContatoSection />
+      <section id="inscrição" className="inscricao-section">
+        <div className="inscricao-wrapper">
+          <h2 className="title">Inscrição</h2>
+          <p className="description">
+            As inscrições para o curso estarão disponíveis apenas durante o
+            período abaixo.
+          </p>
+          <button
+            className="inscricao-button"
+            onClick={() => (window.location.href = "/formulario-de-inscricao")}
+            disabled={!isPeriodoInscricao}
+          >
+            {isPeriodoInscricao
+              ? "Inscreva-se agora"
+              : "Inscrição indisponível"}
+          </button>
+          <p className="periodo-text">
+            Período de inscrições: <strong>16 de junho de 2025</strong> a{" "}
+            <strong>07 de julho de 2025</strong>
+          </p>
+        </div>
+      </section>
+
       <footer>
         <div className="footer-content">
           <img src={ufcgLogo} alt="Logo da UFCG" />
