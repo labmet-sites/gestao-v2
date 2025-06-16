@@ -1,3 +1,4 @@
+// Home.jsx
 import { HomeStyles } from "./HomeStyles";
 import ufcgLogo from "../assets/ufcg-logo.png";
 import ufcgName from "../assets/ufcg_png.png";
@@ -84,6 +85,11 @@ export default function Home() {
             <strong>UFCG</strong>.
           </p>
           <p className="badge">100% Online</p>
+          {isPeriodoInscricao && (
+            <button className="inscricoes-abertas-home-btn" onClick={() => scrollToSection("inscrição")}>
+              INSCRIÇÕES ABERTAS: 16 de junho a 07 de julho de 2025
+            </button>
+          )}
         </div>
       </section>
 

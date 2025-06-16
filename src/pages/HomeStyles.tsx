@@ -1,3 +1,4 @@
+// HomeStyles.js
 import styled from "styled-components";
 import bgImage from "../assets/gestaodeativos.jpg";
 
@@ -229,6 +230,7 @@ export const HomeStyles = styled.section`
     box-sizing: border-box;
     padding-top: ${headerHeight};
     display: flex;
+    flex-direction: column; /* Added for vertical centering */
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
@@ -269,6 +271,9 @@ export const HomeStyles = styled.section`
       max-width: 800px;
       padding: 0 20px;
       animation: fadeIn 1s ease-in-out;
+      display: flex; /* Added for button alignment */
+      flex-direction: column; /* Added for button alignment */
+      align-items: center; /* Added for button alignment */
 
       .ufcg-img {
         width: 280px;
@@ -302,6 +307,43 @@ export const HomeStyles = styled.section`
         font-weight: 600;
         font-family: "Montserrat", sans-serif;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px; /* Space between badge and new button */
+      }
+
+      .inscricoes-abertas-home-btn {
+        background-color: #28a745; /* Green color for "OPEN" */
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+        &:hover {
+          background-color: #218838;
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          transform: translateY(0);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+          font-size: 1rem;
+          padding: 10px 20px;
+          margin-top: 20px; /* Adjust spacing for smaller screens */
+        }
+
+        @media (max-width: 480px) {
+          font-size: 0.9rem;
+          padding: 8px 15px;
+        }
       }
 
       @media (max-width: 768px) {
