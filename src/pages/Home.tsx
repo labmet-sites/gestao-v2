@@ -4,7 +4,7 @@ import ufcgName from "../assets/ufcg_png.png";
 import vector from "../assets/vector_about.jpg";
 import Professors from "../components/Professors";
 import { FaWhatsapp } from "react-icons/fa";
-import InteresseSection from "../components/InteresseSection";
+// import InteresseSection from "../components/InteresseSection";
 import Estrutura from "../components/Estrutura";
 import ContatoSection from "../components/Contact";
 import InformacoesSection from "../components/InformacoesSection";
@@ -46,9 +46,9 @@ export default function Home() {
           <li className="option" onClick={() => scrollToSection("professores")}>
             Professores
           </li>
-          <li className="option" onClick={() => scrollToSection("interesse")}>
+          {/* <li className="option" onClick={() => scrollToSection("interesse")}>
             Tenho Iteresse
-          </li>
+          </li> */}
           <li className="option" onClick={() => scrollToSection("informacoes")}>
             Mais Informações
           </li>
@@ -127,7 +127,7 @@ export default function Home() {
       </section>
       <Estrutura />
       <Professors />
-      <InteresseSection />
+      {/* <InteresseSection /> */}
       <InformacoesSection />
       <ContatoSection />
       <section id="inscrição" className="inscricao-section">
@@ -139,7 +139,7 @@ export default function Home() {
           </p>
           <button
             className="inscricao-button"
-            onClick={() => (window.location.href = "/formulario-de-inscricao")}
+            onClick={() => (window.location.href = "https://docs.google.com/forms/d/193S7o3cQTA7wRwAVTI_-_Y6HeduMsTzznOTomG7QLoM/edit")}
             disabled={!isPeriodoInscricao}
           >
             {isPeriodoInscricao
