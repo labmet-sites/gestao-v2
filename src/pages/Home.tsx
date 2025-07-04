@@ -21,7 +21,7 @@ export default function Home() {
 
   const hoje = new Date();
   const inicioInscricao = new Date("2025-06-16T00:00:00");
-  const fimInscricao = new Date("2025-07-07T23:59:59");
+  const fimInscricao = new Date("2025-07-20T23:59:59");
   const isPeriodoInscricao = hoje >= inicioInscricao && hoje <= fimInscricao;
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -87,7 +87,7 @@ export default function Home() {
           <p className="badge">100% Online</p>
           {isPeriodoInscricao && (
             <button className="inscricoes-abertas-home-btn" onClick={() => scrollToSection("inscrição")}>
-              INSCRIÇÕES ABERTAS: 16 de junho a 07 de julho de 2025
+              INSCRIÇÕES ABERTAS: 16 de junho a 20 de julho de 2025
             </button>
           )}
         </div>
@@ -154,7 +154,7 @@ export default function Home() {
           </button>
           <p className="periodo-text">
             Período de inscrições: <strong>16 de junho de 2025</strong> a{" "}
-            <strong>07 de julho de 2025</strong>
+            <strong>20 de julho de 2025</strong>
           </p>
         </div>
       </section>
